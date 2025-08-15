@@ -32,15 +32,45 @@ body {
   padding: 10px;
 }
 .heading {
- display:flex;
- gap:15px;
- width:100%;
- padding-top:14px;
- font-weight:bold;
-   /* white-space: nowrap; */
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding-top: 14px;
+  font-weight: bold;
+  align-items: center;
+  /* white-space: nowrap; */
+  font-size: 13px;
+  justify-content: cener;
+}
+.heading img {
+  width: 20px;
+}
+.footer {
+  display: flex;
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+
+  gap: 13px;
+}
+.footer a {
+  color: grey;
+  postion: absolute;
+  bottom:0;
+}
+.library  {
+  min-height: 80vh;
+  position: relative;
+}
+.header{
+  display:flex;
+  justify-content:space-between;
+  background-color:rgb(34,34,34);
 
 }
-.heading img{
-  width:20px;
- 
+.header > *:not(button) {
+  padding: 12px;
+}
+.right{
+  margin:16px 0px;
 }
