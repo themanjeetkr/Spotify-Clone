@@ -18,6 +18,7 @@ body {
 }
 .right {
   width: 75vw;
+  position:relative;
 }
 .home ul li {
   width: 14px;
@@ -72,6 +73,7 @@ body {
 }
 .right {
   margin: 16px 0px;
+  position:relative;
 }
 .spotifyplaylists {
   padding: 16px;
@@ -168,4 +170,19 @@ body {
   color: #fff; /* white text */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* subtle white glow */
   transform: translateY(-3px); /* lift effect */
+}
+
+.playbar{
+  position:absolute;
+  bottom:0;
+  /* bottom:0; */
+  background-color:rgb(139,193,139);
+  width:100%;
+  padding:12px;
+}
+.songbutton{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
 }
