@@ -10,19 +10,35 @@ async function getsongs() {
 
   for (let i = 0; i < as.length; i++) {
     const element = as[i];
-    if (element.href.endsWith(".mp3")) { // fixed typo
+    if (element.href.endsWith(".mp3")) { 
       songs.push(element.href);
     }
   }
 
-  // console.log(songs); // shows all .mp3 links
   return songs;
 }
 
-async function main(){
-  let songs=await getsongs();
+async function main() {
+  let songs = await getsongs();
   console.log(songs);
-  var audio=new Audio(songs[0]);
-  audio.play();  
+
+  // Play the first song
+  var audio = new Audio(songs[0]);
+  // audio.play();
+
+  // Select UL (make sure HTML has <div class="songlist"><ul></ul></div>)
+  let songul = document.querySelector(".songlist ul");
+
+  // Add songs to the list
+  for (let i = 0; i < songs.length; i++) {
+    let li = document.createElement("li");
+    li.textContent = songs[i].split("/").pop(); // show only file name
+    li.addEventListener("click", () => {
+      audio.src = songs[i];
+      audio.play();
+    });
+    songul.appendChild(li);
+  }
 }
+
 main();

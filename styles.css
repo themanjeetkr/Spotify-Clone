@@ -186,3 +186,14 @@ body {
   align-items:center;
   gap:20px;
 }
+.songlist{
+  padding:0 42px;
+}
+.songlist ul li{
+  list-style-type:decimal;
+  display:flex;
+  gap:34px;
+  cursor:pointer;
+  padding:10px 0;
+  
+}
