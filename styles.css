@@ -197,3 +197,10 @@ body {
   padding:10px 0;
   
 }
+.playnow span{
+  display:flex;
+  font-size:10px;
+  width:64px;
+  justify-content:center;
+  align-item:center;
+}
