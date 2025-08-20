@@ -173,12 +173,16 @@ body {
 }
 
 .playbar{
-  position:absolute;
-  bottom:0;
+  position:fixed;
+  bottom:30px;
   /* bottom:0; */
-  background-color:rgb(139,193,139);
+  background-color:white;
   width:95%;
   padding:12px;
+  width:70vw;
+  filter:invert(1);
+  border-radius:20px;
+  height:40px;
 }
 .songbutton{
   display:flex;
@@ -189,8 +193,9 @@ body {
 .songlist{
   padding:0 4px;
   width:100%;
-  height:644px;
+  height:544px;
   overflow-y:scroll;
+   /* margin-bottom: 15px;  */
 }
 .songlist ul li {
   list-style-type: none;     /* remove numbering */
@@ -233,4 +238,14 @@ body {
 .songlist{
   /* height:150px; */
 }
-
+.seekbar {
+  height: 2px;
+  width: 100%;
+  border: 2px solid red;
+  position: absolute;   /* fixed spelling */
+  bottom: 0;            /* stick to bottom of parent */
+  left: 0;
+  border-radius: 5px;
+  background-color: transparent; /* optional */
+  margin-right:2px;
+}
