@@ -34,6 +34,7 @@ async function main() {
     let filename = songs[i].split("/").pop();
 
     li.classList.add("invert");
+    li.classList.add("song-item");
 
     li.innerHTML = `
       <img  src="images/music.svg" alt="music class="invert" />
