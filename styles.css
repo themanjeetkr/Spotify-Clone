@@ -187,20 +187,36 @@ body {
   gap:20px;
 }
 .songlist{
-  padding:0 42px;
+  padding:0 4px;
+  width:100%;
 }
-.songlist ul li{
-  list-style-type:decimal;
-  display:flex;
-  gap:34px;
-  cursor:pointer;
-  padding:10px 0;
-  
+.songlist ul li {
+  list-style-type: none;     /* remove numbering */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* pushes playnow to right */
+  cursor: pointer;
+  padding: 13px;
+  border: 1px solid white;
+  margin: 12px;
+  border-radius: 5px;
 }
-.playnow span{
-  display:flex;
-  font-size:10px;
-  width:64px;
-  justify-content:center;
-  align-item:center;
+
+.songlist ul li img {
+  width: 24px;  /* control music.svg size */
+  height: 24px;
+  margin-right: 10px;
 }
+
+.info {
+  flex: 1; /* take available space between icon and playnow */
+  margin-left: 10px;
+}
+
+.playnow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+

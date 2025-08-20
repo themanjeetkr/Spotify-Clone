@@ -24,21 +24,38 @@ async function main() {
 
   // Play the first song
   var audio = new Audio(songs[0]);
-  // audio.play();
 
-  // Select UL (make sure HTML has <div class="songlist"><ul></ul></div>)
+  // Select UL
   let songul = document.querySelector(".songlist ul");
 
   // Add songs to the list
   for (let i = 0; i < songs.length; i++) {
     let li = document.createElement("li");
-    li.textContent = songs[i].split("/").pop(); // show only file name
-    li.addEventListener("click", () => {
+    let filename = songs[i].split("/").pop();
+
+    li.classList.add("invert");
+
+    li.innerHTML = `
+      <img  src="images/music.svg" alt="music class="invert" />
+      <div class="info invert">
+        <div>${filename}</div>
+        <div>Unknown Artist</div>
+      </div>
+      <div class="playnow invert">
+        <span>Play Now</span>
+        <img class="invert" src="images/play.svg" alt="play" />
+      </div>
+    `;
+
+    // Add click event to playnow only
+    li.querySelector(".playnow").addEventListener("click", (e) => {
+      e.stopPropagation();
       audio.src = songs[i];
       audio.play();
     });
+
     songul.appendChild(li);
   }
 }
 
-main();
+main(); // ✅ safely outside the loop
