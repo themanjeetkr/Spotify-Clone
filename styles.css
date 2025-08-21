@@ -190,6 +190,9 @@ body {
   align-items:center;
   gap:20px;
 }
+.songbutton img{
+  height:30px;
+}
 .songlist{
   padding:0 4px;
   width:100%;

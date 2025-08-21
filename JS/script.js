@@ -76,20 +76,22 @@ async function main() {
   });
 
   // Controls
-  let playBtn = document.querySelector(".play");
+  let playBtn = document.querySelector(".hey");
   let prevBtn = document.querySelector(".previous");
   let nextBtn = document.querySelector(".next");
 
   // Play / Pause
-  playBtn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      playBtn.src = "images/pause.svg";
-    } else {
-      audio.pause();
-      playBtn.src = "images/play.svg";
-    }
-  });
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play().catch(err => console.log("Error playing audio:", err));
+    playBtn.src = "images/pause.svg";
+  } else {
+    audio.pause();
+    playBtn.src = "images/play.svg";
+  }
+});
+
+
 
   // Previous
   prevBtn.addEventListener("click", () => {
