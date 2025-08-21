@@ -28,7 +28,10 @@ const playmusic = (index) => {
   if (index < 0 || index >= songs.length) return; // guard
   currentIndex = index;
   audio.src = songs[currentIndex];
-  audio.play();
+  audio.play(); const songinfo = document.querySelector(".songinfo");
+  let filename = songs[currentIndex].split("/").pop();
+  songinfo.textContent = filename; // or `Artist - ${filename}` if you have artist info
+
 
   // change play button icon to pause
   document.querySelector(".play").src = "images/pause.svg";
