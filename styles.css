@@ -181,8 +181,8 @@ body {
   padding:12px;
   width:70vw;
   filter:invert(1);
-  border-radius:20px;
-  height:40px;
+  border-radius:10px;
+  height:50px;
 }
 .songbutton{
   display:flex;
@@ -248,4 +248,14 @@ body {
   border-radius: 5px;
   background-color: transparent; /* optional */
   margin-right:2px;
+}
+.circle{
+  width:23px;
+  height:23px;
+  border-radius:13px;
+  background-color:black;
+  position:relative;
+  bottom:11px;
+  left:0%;
+  transition:left 0.5s;
 }
