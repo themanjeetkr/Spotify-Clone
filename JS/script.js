@@ -76,19 +76,27 @@ async function main() {
   });
 
   // Controls
-  let playBtn = document.querySelector(".hey");
+  // let playBtn = document.querySelector(".hey");
   let prevBtn = document.querySelector(".previous");
   let nextBtn = document.querySelector(".next");
 
   // Play / Pause
+let playBtn = document.querySelector(".hey");
+// playBtn.src = "images/play.svg"; // default icon
+
 playBtn.addEventListener("click", () => {
   if (audio.paused) {
-    audio.play().catch(err => console.log("Error playing audio:", err));
+    audio.play();
     playBtn.src = "images/pause.svg";
   } else {
     audio.pause();
     playBtn.src = "images/play.svg";
   }
+});
+
+// Reset icon when song ends
+audio.addEventListener("ended", () => {
+  playBtn.src = "images/play.svg";
 });
 
 
